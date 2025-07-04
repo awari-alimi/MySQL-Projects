@@ -1,22 +1,64 @@
-# MYSQL Projects Portfolio
-Welcome to mySQL portfolio! This repository showcases a collection of MYSQL-based data analysis projects I've completed to demonstrate my skills in querying, data modeling, and business intelligence.
-## Tools & Technologies
-- **SQL** (MySQL)
-- **Power BI** (Visualization)
-- **Git & GitHub** (Version control)
-## Projects Included
+# 📊 Sales Data Analysis – SQL Project
 
-| Project | Description |
-|--------|-------------|
-| 📊Sales Analysis (Beginner Project)| In this project, I performed a comprehensive sales data analysis using MySQL to uncover key business insights. The goal was to identify trends, top-performing products, customer behaviour, and regional performance. I used SQL to clean and query the data, calculate KPIs such as total revenue, average order value, and sales growth, and segment data by time, product, and geography. This analysis helps stakeholders make data-driven decisions to optimise sales strategies and improve customer engagement. |
-|🎬 Movie Ratings or E-commerce Orders (Beginner Project)| This project focuses on analysing movie ratings or e-commerce order data using SQL. I explored user behaviour, product popularity, and rating trends by writing queries to calculate average ratings, identify top-rated items, and analyse purchase frequency. This project demonstrates foundational SQL skills such as filtering, grouping, joining tables, and using aggregate functions. |
-|👥 Customer Segmentation (Intermediate Project)|In this project, I used SQL to segment customers based on their purchasing behaviour and demographics. I applied techniques like CASE statements, subqueries, and window functions to group customers into meaningful categories (e.g., high-value, frequent buyers). The goal was to support targeted marketing strategies and improve customer retention through data-driven insights.|
-| 🌍 Carbon Emissions Analysis (Intermediate to Advanced Project)|This project involved analysing global carbon emissions data to identify trends, key contributors, and seasonal patterns. Using SQL, I aggregated emissions by country, year, and source, and calculated growth rates over time. The analysis supports environmental awareness and policy-making by highlighting areas with the highest impact and change. 
-| ⚙️ SQL Optimisation or Data Warehousing (Advanced Project)|This advanced project showcases my ability to work with large datasets and optimise SQL queries for performance. I designed a simplified data warehouse schema, implemented ETL logic, and used indexing and query tuning techniques to improve efficiency. This project demonstrates my understanding of database architecture, normalisation, and scalable data solutions. |
-## 📌 How to Use
-1. Browse each project folder for SQL scripts and documentation.
-2. Review the `README.md` in each folder for project-specific details.
-3. Clone the repo and run queries in your SQL environment.
+## 📁 Project Overview
 
-## 📫 Contact
-Feel free to connect with me on [linkedin](https://www.linkedin.com/in/awari-alimi/)
+This project performs a comprehensive analysis of sales data using MySQL. The goal is to uncover key business insights such as revenue trends, top-performing products, customer behavior, and regional performance. The analysis supports data-driven decision-making to optimize sales strategies and improve customer engagement.
+
+## 🛠️ Steps Performed
+
+### 1. Database Setup
+- Created a new database: `Sales_Data`
+- Loaded and previewed the dataset
+- Renamed the table from `sales data` to `sales_data` for easier querying
+
+### 2. Data Cleaning
+- Renamed columns to follow `snake_case` naming convention
+- Removed rows with missing or invalid values
+- Ensured numeric fields were correctly typed and recalculated the `sales` column
+
+### 3. Key Performance Indicators (KPIs)
+- Total Revenue
+- Average Order Value (AOV)
+- Monthly Sales Growth using window functions
+
+### 4. Product Performance
+- Identified top 10 products by revenue
+- Identified top 10 products by quantity sold
+
+### 5. Customer Behavior
+- Analyzed peak purchase hours
+- Explored purchase patterns by city and hour
+
+### 6. Regional Performance
+- Calculated revenue by city
+- Counted orders by region (parsed from address)
+
+### 7. Time-Based Trends
+- Monthly revenue trends
+- Daily sales trends
+
+## 🧾 Table Schema (After Cleaning)
+
+| Column Name        | Description                                 |
+|--------------------|---------------------------------------------|
+| `order_id`         | Unique ID for each order                    |
+| `product`          | Name of the purchased product               |
+| `quantity_ordered` | Number of units ordered                     |
+| `price_each`       | Price per unit                              |
+| `order_date`       | Date and time of the order                  |
+| `purchase_address` | Shipping address                            |
+| `month`            | Month extracted from `order_date`          |
+| `sales`            | Total sales amount (`quantity × price`)    |
+| `city`             | City extracted from `purchase_address`     |
+| `hour`             | Hour extracted from `order_date`           |
+
+## ✅ Outcome
+
+This analysis provides actionable insights into:
+
+- Sales performance over time
+- Customer purchasing patterns
+- Regional demand
+- Product popularity
+
+These insights can help stakeholders make informed decisions to boost revenue and enhance customer satisfaction.
