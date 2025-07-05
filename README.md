@@ -1,22 +1,66 @@
-# MYSQL Projects Portfolio
-Welcome to mySQL portfolio! This repository showcases a collection of MYSQL-based data analysis projects I've completed to demonstrate my skills in querying, data modeling, and business intelligence.
-## Tools & Technologies
-- **SQL** (MySQL)
-- **Power BI** (Visualization)
-- **Git & GitHub** (Version control)
-## Projects Included
+# 🎬 Movie Ratings Analysis – SQL Project
 
-| Project | Description |
-|--------|-------------|
-| 📊Sales Analysis (Beginner Project)| In this project, I performed a comprehensive sales data analysis using MySQL to uncover key business insights. The goal was to identify trends, top-performing products, customer behaviour, and regional performance. I used SQL to clean and query the data, calculate KPIs such as total revenue, average order value, and sales growth, and segment data by time, product, and geography. This analysis helps stakeholders make data-driven decisions to optimise sales strategies and improve customer engagement. |
-|🎬 Movie Ratings or E-commerce Orders (Beginner Project)| This project focuses on analysing movie ratings or e-commerce order data using SQL. I explored user behaviour, product popularity, and rating trends by writing queries to calculate average ratings, identify top-rated items, and analyse purchase frequency. This project demonstrates foundational SQL skills such as filtering, grouping, joining tables, and using aggregate functions. |
-|👥 Customer Segmentation (Intermediate Project)|In this project, I used SQL to segment customers based on their purchasing behaviour and demographics. I applied techniques like CASE statements, subqueries, and window functions to group customers into meaningful categories (e.g., high-value, frequent buyers). The goal was to support targeted marketing strategies and improve customer retention through data-driven insights.|
-| 🌍 Carbon Emissions Analysis (Intermediate to Advanced Project)|This project involved analysing global carbon emissions data to identify trends, key contributors, and seasonal patterns. Using SQL, I aggregated emissions by country, year, and source, and calculated growth rates over time. The analysis supports environmental awareness and policy-making by highlighting areas with the highest impact and change. 
-| ⚙️ SQL Optimisation or Data Warehousing (Advanced Project)|This advanced project showcases my ability to work with large datasets and optimise SQL queries for performance. I designed a simplified data warehouse schema, implemented ETL logic, and used indexing and query tuning techniques to improve efficiency. This project demonstrates my understanding of database architecture, normalisation, and scalable data solutions. |
-## 📌 How to Use
-1. Browse each project folder for SQL scripts and documentation.
-2. Review the `README.md` in each folder for project-specific details.
-3. Clone the repo and run queries in your SQL environment.
+## 📁 Project Overview  
+This project performs a comprehensive analysis of movie data using MySQL. The goal is to uncover key insights such as top-rated movies, popular genres, director activity, and yearly trends. The analysis supports data-driven decisions in content curation, production planning, and audience engagement strategies.
 
-## 📫 Contact
-Feel free to connect with me on [linkedin](https://www.linkedin.com/in/awari-alimi/)
+---
+
+## 🛠️ Steps Performed  
+
+### 1. Database Setup  
+- Created a new database: `Movie_Ratings`  
+- Loaded and previewed the dataset  
+- Selected all records from the `movies` table  
+
+### 2. Key Performance Indicators (KPIs)  
+- **Top 10 Highest Rated Movies**  
+  Identified the top 10 movies based on IMDb score  
+
+- **Most Popular Genres**  
+  Counted the number of movies in each genre  
+
+- **Average IMDb Score by Rating**  
+  Calculated the average IMDb score for each movie rating category  
+
+### 3. Director Insights  
+- **Most Active Directors**  
+  Identified the top 10 directors with the highest number of movies  
+
+### 4. Time-Based Trends  
+- **Yearly Trend of Movie Releases**  
+  Analyzed the number of movies released each year  
+
+### 5. Audience Engagement  
+- **Top 10 Most Voted Movies**  
+  Found the movies with the highest number of IMDb votes  
+
+- **Average IMDb Score by Genre**  
+  Compared average IMDb scores across different genres  
+
+---
+
+## 🧾 Table Schema (movies)
+
+| Column Name | Description |
+|-------------|-------------|
+| name        | Title of the movie |
+| genre       | Genre of the movie |
+| score       | IMDb score of the movie |
+| imdb_score  | Raw IMDb score used for averaging |
+| rating      | Movie rating (e.g., PG-13, R) |
+| director    | Director of the movie |
+| released    | Year the movie was released |
+| votes       | Number of IMDb votes received |
+
+---
+
+## ✅ Outcome  
+This analysis provides actionable insights into:
+
+- 🎖️ Top-rated and most-voted movies  
+- 🎭 Genre popularity and performance  
+- 🎬 Director productivity  
+- 📈 Trends in movie releases over the years  
+- ⭐ Viewer preferences by rating and genre  
+
+These insights can help stakeholders in the film and streaming industries make informed decisions to enhance content strategy, audience targeting, and production planning.
